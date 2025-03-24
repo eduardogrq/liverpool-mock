@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/style.css" />
+    <title>Comprobante de Liverpool Cash®</title>
+
+    <style>
+      body {
+        font-family: "Roboto", sans-serif;
+        padding: 8px;
+        color: #333;
+        font-size: 14px;
+      }
+
+      table {
+        width: 100%;
+      }
+
+      tr {
+        height: 40px;
+      }
+
+      .lightFont {
+        font-weight: lighter;
+      }
+
+      .alignmentRight {
+        text-align: right;
+      }
+
+      .alignmentLeft {
+        text-align: left;
+      }
+
+      .halfWidth {
+        width: 50%;
+      }
+
+      .titleWidth {
+        width: 22%;
+        padding-top: 10px;
+      }
+
+      .upperCaseStyle {
+        text-transform: uppercase;
+      }
+
+      .loanAmountContainer {
+        text-align: center;
+      }
+
+      .loanAmountText {
+        padding: 20px 0 0;
+      }
+
+      .bottomBorder {
+        color: #666666;
+        font-size: 14px;
+        border-bottom: 5px solid #e10098;
+        padding-bottom: 3px;
+      }
+
+      h1 {
+        padding-bottom: 10px;
+        font-size: 32px;
+        color: #e10098;
+        margin: 10px 0 15px;
+        font-weight: lighter;
+      }
+
+      hr {
+        border: 0;
+        height: 1px;
+        background: #d8d8d8;
+        margin-bottom: 30px;
+      }
+
+      section > h2 {
+        font-size: 22px;
+      }
+
+      .messageTopContainer {
+        padding: 10px 0;
+      }
+
+      .messageTopContainer > h2 {
+        font-size: 32px;
+        margin-bottom: -6px;
+      }
+
+      .spacerTitle {
+        height: 1rem;
+      }
+
+      .footer {
+        height: 16px;
+        background-color: #e10098;
+        width: 100%;
+        padding-top: 50%;
+      }
+
+      .paddingFooter {
+        padding-top: 50%;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="main-container">
+      <header>
+        <table>
+          <tr>
+            <td class="titleWidth alignmentLeft" rowspan="3">
+              <img
+                src="https://assetsmcqa2.liverpool.com.mx/images/loans/logo-liv.png"
+              />
+            </td>
+            <!-- Format date: 25 de Julio 2023, 14:00 hrs.-->
+            <td class="alignmentRight">
+              <div class="bottomBorder">[(${fechaOtorgamientoEncabezado})]</div>
+              <div class="spacerTitle"></div>
+            </td>
+          </tr>
+        </table>
+      </header>
+      <section class="messageTopContainer">
+        <h2>Transferencia en proceso</h2>
+        <p>
+          Te compartimos el comprobante de la operación de tu Liverpool Cash®.
+        </p>
+      </section>
+      <section class="loanAmountContainer">
+        <hr />
+        <div>Monto de tu Liverpool Cash® otorgado:</div>
+        <!-- format: ejem $1,000.00 -->
+        <h1 class="lightFont">$[(${importePrestamo})]</h1>
+        <hr />
+      </section>
+      <section>
+        <table>
+          <tr>
+            <td class="halfWidth alignmentLeft">Pago mensual:</td>
+            <!-- Format: ejem $1,000.00 -->
+            <td class="halfWidth alignmentRight">$[(${pagoMensual})]</td>
+          </tr>
+
+          <tr>
+            <td class="halfWidth alignmentLeft">Plazo:</td>
+            <!-- Format: ejem integer number -->
+            <td class="halfWidth alignmentRight">[(${plazo})]&nbsp;meses</td>
+          </tr>
+
+          <tr>
+            <td class="halfWidth alignmentLeft">Tasa de interés anual:</td>
+            <!-- Format: number with two digits as cents and add percentage sign 21.00% -->
+            <td class="halfWidth alignmentRight">[(${interestRate})]%</td>
+          </tr>
+
+          <tr>
+            <td class="halfWidth alignmentLeft">Referencia:</td>
+            <!-- Format: ejem integer number -->
+            <td class="halfWidth alignmentRight">[(${numeroReferencia})]</td>
+          </tr>
+
+          <tr>
+            <td class="halfWidth alignmentLeft">Fecha de otorgamiento:</td>
+            <!-- Format: dd/mm/aa HH:MM hrs-->
+            <td class="halfWidth alignmentRight">[(${fechaOtorgamiento})]</td>
+          </tr>
+
+          <tr>
+            <td class="halfWidth alignmentLeft">Banco receptor:</td>
+            <!-- Format: dd/mm/aa HH:MM hrs-->
+            <td class="halfWidth alignmentRight">[(${bancoReceptor})]</td>
+          </tr>
+
+          <tr>
+            <td class="halfWidth alignmentLeft">CLABE SPEI:</td>
+            <!-- Format: dd/mm/aa HH:MM hrs-->
+            <td class="halfWidth alignmentRight">[(${clabeSpei})]</td>
+          </tr>
+        </table>
+        <table class="paddingFooter">
+          <tr class="footer">
+            <td></td>
+          </tr>
+        </table>
+      </section>
+    </div>
+  </body>
+</html>

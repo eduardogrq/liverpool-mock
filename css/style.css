@@ -1,0 +1,14 @@
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.main-container {
+  width: 812px;
+  height: 1058px;
+  border: 1px solid gray;
+  padding: 50px;
+}
+
+/*# sourceMappingURL=style.css.map */
