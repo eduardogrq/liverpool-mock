@@ -11,8 +11,8 @@ body {
   padding: 50px;
 }
 
-.messageTopContainer{
-  p{
+.messageTopContainer {
+  p {
     font-size: 24px;
     margin-top: 20px;
     margin-bottom: 20px;
@@ -28,13 +28,39 @@ body {
   color: pink;
   width: 100%;
   text-align: end;
-  span{
-    color: #E10098;
-    background-color:#FCE6F5;
+  span {
+    color: #e10098;
+    background-color: #fce6f5;
     padding: 2px 8px;
     border-radius: 4px;
     font-weight: 600;
+    margin-bottom: 40px;
   }
 }
+.notification {
+  font-size: 14px;
+  color: #666666;
+}
 
+.secondSection {
+  margin-top: 20px;
+}
+.mb-md {
+  margin-bottom: 150px;
+}
+.secondTable {
+  margin-top: 15px !important;
+}
+
+.second-hr {
+  margin-bottom: 15px;
+}
+
+.bold-text {
+  font-weight: 600;
+}
+
+.text-lg {
+  font-size: 20px;
+}
 /*# sourceMappingURL=style.css.map */

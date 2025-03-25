@@ -17,10 +17,16 @@
 
       table {
         width: 100%;
+        margin: 14px 0;
       }
 
       tr {
         height: 40px;
+        font-size: 18px;
+      }
+
+      tr.main {
+        height: 60px;
       }
 
       .lightFont {
@@ -83,6 +89,7 @@
 
       .messageTopContainer {
         padding: 10px 0;
+        margin-bottom: 40px;
       }
 
       .messageTopContainer > h2 {
@@ -102,7 +109,7 @@
       }
 
       .paddingFooter {
-        padding-top: 50%;
+        padding-top: 39%;
       }
     </style>
   </head>
@@ -130,13 +137,13 @@
         <p>(Pagos fijos)</p>
         <span>Te compartimos el comprobante de tu operación.</span>
       </section>
-      <section class="loanAmountContainer">
-        <hr />
-        <div>Monto de tu Liverpool Cash® otorgado:</div>
-        <!-- format: ejem $1,000.00 -->
-        <h1 class="lightFont">$[(${importePrestamo})]</h1>
-        <hr />
-      </section>
+      <!-- <section class="loanAmountContainer"> -->
+      <!-- <hr /> -->
+      <!-- <div>Monto de tu Liverpool Cash® otorgado:</div> -->
+      <!-- format: ejem $1,000.00 -->
+      <!-- <h1 class="lightFont">$[(${importePrestamo})]</h1> -->
+      <!-- <hr /> -->
+      <!-- </section> -->
       <section>
         <div class="pinkMessage"><span>24 meses pagos fijos</span></div>
         <table>
@@ -164,12 +171,32 @@
             <td class="halfWidth alignmentRight">$10,794.48</td>
           </tr>
 
-          <tr>
+          <tr class="bold-text text-lg">
             <td class="halfWidth alignmentLeft">Pago mensual:</td>
             <!-- Format: dd/mm/aa HH:MM hrs-->
             <td class="halfWidth alignmentRight">$449.77*</td>
           </tr>
         </table>
+        <div>
+          <span class="notification"
+            >*El pago mensual está calculado con pagos puntuales.
+          </span>
+        </div>
+        <div class="secondSection">
+          <hr class="second-hr" />
+          <table class="secondTable">
+            <tr class="main">
+              <td class="halfWidth alignmentLeft">Referencia:</td>
+              <!-- Format: dd/mm/aa HH:MM hrs-->
+              <td class="halfWidth alignmentRight">060920240858106B03R2BN4</td>
+            </tr>
+            <tr class="main">
+              <td class="halfWidth alignmentLeft">Fecha de parcialización:</td>
+              <!-- Format: dd/mm/aa HH:MM hrs-->
+              <td class="halfWidth alignmentRight">28/06/24 14:00 hrs.</td>
+            </tr>
+          </table>
+        </div>
         <table class="paddingFooter">
           <tr class="footer">
             <td></td>
