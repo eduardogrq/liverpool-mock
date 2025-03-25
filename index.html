@@ -41,7 +41,6 @@
 
       .titleWidth {
         width: 22%;
-        padding-top: 10px;
       }
 
       .upperCaseStyle {
@@ -120,17 +119,16 @@
             </td>
             <!-- Format date: 25 de Julio 2023, 14:00 hrs.-->
             <td class="alignmentRight">
-              <div class="bottomBorder">[(${fechaOtorgamientoEncabezado})]</div>
+              <div class="bottomBorder">28 de Junio 2024, 14.00 hrs.</div>
               <div class="spacerTitle"></div>
             </td>
           </tr>
         </table>
       </header>
       <section class="messageTopContainer">
-        <h2>Transferencia en proceso</h2>
-        <p>
-          Te compartimos el comprobante de la operación de tu Liverpool Cash®.
-        </p>
+        <h2>Compras diferidas</h2>
+        <p>(Pagos fijos)</p>
+        <span>Te compartimos el comprobante de tu operación.</span>
       </section>
       <section class="loanAmountContainer">
         <hr />
@@ -140,47 +138,36 @@
         <hr />
       </section>
       <section>
+        <div class="pinkMessage"><span>24 meses pagos fijos</span></div>
         <table>
           <tr>
-            <td class="halfWidth alignmentLeft">Pago mensual:</td>
+            <td class="halfWidth alignmentLeft">Compra:</td>
             <!-- Format: ejem $1,000.00 -->
-            <td class="halfWidth alignmentRight">$[(${pagoMensual})]</td>
+            <td class="halfWidth alignmentRight">Pagos fijos 24 meses</td>
+          </tr>
+
+          <tr>
+            <td class="halfWidth alignmentLeft">Monto a diferir:</td>
+            <!-- Format: ejem integer number -->
+            <td class="halfWidth alignmentRight">$6,700.00</td>
           </tr>
 
           <tr>
             <td class="halfWidth alignmentLeft">Plazo:</td>
-            <!-- Format: ejem integer number -->
-            <td class="halfWidth alignmentRight">[(${plazo})]&nbsp;meses</td>
-          </tr>
-
-          <tr>
-            <td class="halfWidth alignmentLeft">Tasa de interés anual:</td>
             <!-- Format: number with two digits as cents and add percentage sign 21.00% -->
-            <td class="halfWidth alignmentRight">[(${interestRate})]%</td>
+            <td class="halfWidth alignmentRight">24 meses</td>
           </tr>
 
           <tr>
-            <td class="halfWidth alignmentLeft">Referencia:</td>
+            <td class="halfWidth alignmentLeft">Total a pagar:</td>
             <!-- Format: ejem integer number -->
-            <td class="halfWidth alignmentRight">[(${numeroReferencia})]</td>
+            <td class="halfWidth alignmentRight">$10,794.48</td>
           </tr>
 
           <tr>
-            <td class="halfWidth alignmentLeft">Fecha de otorgamiento:</td>
+            <td class="halfWidth alignmentLeft">Pago mensual:</td>
             <!-- Format: dd/mm/aa HH:MM hrs-->
-            <td class="halfWidth alignmentRight">[(${fechaOtorgamiento})]</td>
-          </tr>
-
-          <tr>
-            <td class="halfWidth alignmentLeft">Banco receptor:</td>
-            <!-- Format: dd/mm/aa HH:MM hrs-->
-            <td class="halfWidth alignmentRight">[(${bancoReceptor})]</td>
-          </tr>
-
-          <tr>
-            <td class="halfWidth alignmentLeft">CLABE SPEI:</td>
-            <!-- Format: dd/mm/aa HH:MM hrs-->
-            <td class="halfWidth alignmentRight">[(${clabeSpei})]</td>
+            <td class="halfWidth alignmentRight">$449.77*</td>
           </tr>
         </table>
         <table class="paddingFooter">
