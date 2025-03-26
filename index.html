@@ -6,202 +6,95 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="css/style.css" />
     <title>Comprobante de Liverpool Cash®</title>
-
-    <style>
-      body {
-        font-family: "Roboto", sans-serif;
-        padding: 8px;
-        color: #333;
-        font-size: 14px;
-      }
-
-      table {
-        width: 100%;
-        margin: 14px 0;
-      }
-
-      tr {
-        height: 40px;
-        font-size: 18px;
-      }
-
-      tr.main {
-        height: 60px;
-      }
-
-      .lightFont {
-        font-weight: lighter;
-      }
-
-      .alignmentRight {
-        text-align: right;
-      }
-
-      .alignmentLeft {
-        text-align: left;
-      }
-
-      .halfWidth {
-        width: 50%;
-      }
-
-      .titleWidth {
-        width: 22%;
-      }
-
-      .upperCaseStyle {
-        text-transform: uppercase;
-      }
-
-      .loanAmountContainer {
-        text-align: center;
-      }
-
-      .loanAmountText {
-        padding: 20px 0 0;
-      }
-
-      .bottomBorder {
-        color: #666666;
-        font-size: 14px;
-        border-bottom: 5px solid #e10098;
-        padding-bottom: 3px;
-      }
-
-      h1 {
-        padding-bottom: 10px;
-        font-size: 32px;
-        color: #e10098;
-        margin: 10px 0 15px;
-        font-weight: lighter;
-      }
-
-      hr {
-        border: 0;
-        height: 1px;
-        background: #d8d8d8;
-        margin-bottom: 30px;
-      }
-
-      section > h2 {
-        font-size: 22px;
-      }
-
-      .messageTopContainer {
-        padding: 10px 0;
-        margin-bottom: 40px;
-      }
-
-      .messageTopContainer > h2 {
-        font-size: 32px;
-        margin-bottom: -6px;
-      }
-
-      .spacerTitle {
-        height: 1rem;
-      }
-
-      .footer {
-        height: 16px;
-        background-color: #e10098;
-        width: 100%;
-        padding-top: 50%;
-      }
-
-      .paddingFooter {
-        padding-top: 39%;
-      }
-    </style>
   </head>
 
   <body>
-    <div class="main-container">
-      <header>
+    <div class="receipt-container">
+      <header class="receipt-header">
         <table>
           <tr>
-            <td class="titleWidth alignmentLeft" rowspan="3">
+            <td class="header__logo-cell header__logo-cell--left" rowspan="3">
               <img
                 src="https://assetsmcqa2.liverpool.com.mx/images/loans/logo-liv.png"
+                alt="Liverpool Logo"
               />
             </td>
-            <!-- Format date: 25 de Julio 2023, 14:00 hrs.-->
-            <td class="alignmentRight">
-              <div class="bottomBorder">28 de Junio 2024, 14.00 hrs.</div>
-              <div class="spacerTitle"></div>
+            <td class="header__date-cell header__date-cell--right">
+              <div class="header__date-border">
+                28 de Junio 2024, 14.00 hrs.
+              </div>
+              <div class="header__date-spacer"></div>
             </td>
           </tr>
         </table>
       </header>
-      <section class="messageTopContainer">
-        <h2>Compras diferidas</h2>
-        <p>(Pagos fijos)</p>
-        <span>Te compartimos el comprobante de tu operación.</span>
+
+      <section class="receipt-header__message">
+        <h2 class="receipt-header__title">Compras diferidas</h2>
+        <p class="receipt-header__subtitle">(Pagos fijos)</p>
+        <span class="receipt-header__description"
+          >Te compartimos el comprobante de tu operación.</span
+        >
       </section>
-      <!-- <section class="loanAmountContainer"> -->
-      <!-- <hr /> -->
-      <!-- <div>Monto de tu Liverpool Cash® otorgado:</div> -->
-      <!-- format: ejem $1,000.00 -->
-      <!-- <h1 class="lightFont">$[(${importePrestamo})]</h1> -->
-      <!-- <hr /> -->
-      <!-- </section> -->
-      <section>
-        <div class="pinkMessage"><span>24 meses pagos fijos</span></div>
-        <table>
+
+      <section class="receipt-details">
+        <div class="receipt-details__fixed-payment-info">
+          <span>24 meses pagos fijos</span>
+        </div>
+
+        <table class="receipt-details__summary">
           <tr>
-            <td class="halfWidth alignmentLeft">Compra:</td>
-            <!-- Format: ejem $1,000.00 -->
-            <td class="halfWidth alignmentRight">Pagos fijos 24 meses</td>
+            <td class="receipt-details__label">Compra:</td>
+            <td class="receipt-details__value">Pagos fijos 24 meses</td>
           </tr>
 
           <tr>
-            <td class="halfWidth alignmentLeft">Monto a diferir:</td>
-            <!-- Format: ejem integer number -->
-            <td class="halfWidth alignmentRight">$6,700.00</td>
+            <td class="receipt-details__label">Monto a diferir:</td>
+            <td class="receipt-details__value">$6,700.00</td>
           </tr>
 
           <tr>
-            <td class="halfWidth alignmentLeft">Plazo:</td>
-            <!-- Format: number with two digits as cents and add percentage sign 21.00% -->
-            <td class="halfWidth alignmentRight">24 meses</td>
+            <td class="receipt-details__label">Plazo:</td>
+            <td class="receipt-details__value">24 meses</td>
           </tr>
 
           <tr>
-            <td class="halfWidth alignmentLeft">Total a pagar:</td>
-            <!-- Format: ejem integer number -->
-            <td class="halfWidth alignmentRight">$10,794.48</td>
+            <td class="receipt-details__label">Total a pagar:</td>
+            <td class="receipt-details__value">$10,794.48</td>
           </tr>
 
-          <tr class="bold-text text-lg">
-            <td class="halfWidth alignmentLeft">Pago mensual:</td>
-            <!-- Format: dd/mm/aa HH:MM hrs-->
-            <td class="halfWidth alignmentRight">$449.77*</td>
+          <tr class="text-lg bold">
+            <td class="receipt-details__label">Pago mensual:</td>
+            <td class="receipt-details__value">
+              $449.77<span class="text-red">*</span>
+            </td>
           </tr>
         </table>
-        <div>
-          <span class="notification"
-            >*El pago mensual está calculado con pagos puntuales.
-          </span>
+
+        <div class="receipt-details__payment-note">
+          <span
+            ><span class="text-red">*</span>El pago mensual está calculado con
+            pagos puntuales.</span
+          >
         </div>
-        <div class="secondSection">
-          <hr class="second-hr" />
-          <table class="secondTable">
-            <tr class="main">
-              <td class="halfWidth alignmentLeft">Referencia:</td>
-              <!-- Format: dd/mm/aa HH:MM hrs-->
-              <td class="halfWidth alignmentRight">060920240858106B03R2BN4</td>
+
+        <div class="receipt-details__additional-info">
+          <hr class="receipt-details__divider" />
+          <table class="receipt-details__reference-table">
+            <tr>
+              <td class="receipt-details__label">Referencia:</td>
+              <td class="receipt-details__value">060920240858106B03R2BN4</td>
             </tr>
-            <tr class="main">
-              <td class="halfWidth alignmentLeft">Fecha de parcialización:</td>
-              <!-- Format: dd/mm/aa HH:MM hrs-->
-              <td class="halfWidth alignmentRight">28/06/24 14:00 hrs.</td>
+            <tr>
+              <td class="receipt-details__label">Fecha de parcialización:</td>
+              <td class="receipt-details__value">28/06/24 14:00 hrs.</td>
             </tr>
           </table>
         </div>
-        <table class="paddingFooter">
-          <tr class="footer">
-            <td></td>
-          </tr>
-        </table>
+
+        <div class="receipt-footer">
+          <div class="receipt-footer__pink-bar"></div>
+        </div>
       </section>
     </div>
   </body>
