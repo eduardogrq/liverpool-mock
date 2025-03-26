@@ -4,9 +4,193 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="css/style.css" />
     <title>Comprobante de Liverpool Cash®</title>
   </head>
+
+  <style>
+    body {
+      font-family: "Roboto", sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 8px;
+      color: #333;
+      font-size: 14px;
+    }
+
+    .receipt-container {
+      width: 812px;
+      height: 1058px;
+      border: 1px solid gray;
+      padding: 50px;
+      position: relative;
+    }
+
+    .text-lg {
+      font-size: 20px;
+    }
+
+    .bold {
+      font-weight: 600;
+    }
+
+    h1.light-font {
+      font-weight: lighter;
+    }
+
+    .uppercase {
+      text-transform: uppercase;
+    }
+
+    .receipt-header__description {
+      font-size: 18px;
+      line-height: 100%;
+    }
+
+    .receipt-header table {
+      width: 100%;
+      margin: 14px 0;
+    }
+
+    .header__logo-cell {
+      width: 22%;
+      text-align: left;
+    }
+
+    .header__date-cell {
+      text-align: right;
+    }
+
+    .header__date-border {
+      color: #666666;
+      font-size: 14px;
+      border-bottom: 5px solid #e10098;
+      padding-bottom: 3px;
+      line-height: 100%;
+    }
+
+    .header__date-spacer {
+      height: 1rem;
+    }
+
+    .receipt-header__message {
+      padding: 10px 0;
+      margin-bottom: 40px;
+    }
+
+    .receipt-header__title {
+      font-size: 32px;
+      color: #333;
+      margin: 10px 0 13px;
+      font-weight: 700;
+      padding-bottom: 0px;
+      line-height: 118%;
+    }
+
+    .receipt-header__subtitle {
+      font-size: 22px;
+      margin-top: 0;
+      margin-bottom: 30px;
+      line-height: 118%;
+    }
+
+    .receipt-details table {
+      width: 100%;
+      margin: 14px 0;
+    }
+
+    .receipt-details tr {
+      font-size: 18px;
+    }
+
+    .receipt-details__summary-table tr td {
+      line-height: 18.2px;
+    }
+
+    .receipt-details tr:not(.receipt-footer__highlight-bar) {
+      height: 40px;
+    }
+
+    .receipt-details__payment-period-info {
+      display: flex;
+      justify-content: end;
+    }
+
+    .receipt-details__payment-period-info > span {
+      color: #e10098;
+      background: #fce6f5;
+      padding: 2px 8px;
+      border-radius: 4px;
+      font-weight: 600;
+      line-height: 15.6px;
+    }
+
+    .receipt-details__label {
+      width: 50%;
+      text-align: left;
+    }
+
+    .receipt-details__value {
+      width: 50%;
+      text-align: right;
+    }
+
+    .receipt-details__payment-note {
+      font-size: 14px;
+      margin-bottom: 16px;
+      color: #666;
+      line-height: 15.6px;
+    }
+
+    .receipt-details__section-divider {
+      border: 0;
+      height: 1px;
+      background: #d8d8d8;
+      margin-bottom: 30px;
+    }
+
+    .receipt-details__references {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      gap: 40px;
+    }
+
+    .receipt-details__reference {
+      display: flex;
+      justify-content: space-between;
+    }
+
+    .receipt-details__reference > span {
+      line-height: 18.2px;
+    }
+
+    .receipt-details__references {
+      margin-top: 40px;
+      font-size: 18px;
+      color: #333;
+    }
+
+    .receipt-footer {
+      position: absolute;
+      bottom: 0;
+      left: 50px;
+      right: 50px;
+      display: flex;
+      justify-content: center;
+      bottom: 40px;
+    }
+
+    .receipt-footer__highlight-bar {
+      height: 16px;
+      background-color: #e10098;
+      width: 100%;
+    }
+
+    .text--color-red {
+      color: #ff0000;
+    }
+  </style>
 
   <body>
     <div class="receipt-container">
