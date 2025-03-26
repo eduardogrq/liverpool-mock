@@ -93,20 +93,20 @@ h1.light-font {
   font-size: 18px;
 }
 
-.receipt-details__summary tr td {
+.receipt-details__summary-table tr td {
   line-height: 18.2px;
 }
 
-.receipt-details tr:not(.receipt-footer__pink-bar) {
+.receipt-details tr:not(.receipt-footer__highlight-bar) {
   height: 40px;
 }
 
-.receipt-details__fixed-payment-info {
+.receipt-details__payment-period-info {
   display: flex;
   justify-content: end;
 }
 
-.receipt-details__fixed-payment-info > span {
+.receipt-details__payment-period-info > span {
   color: #e10098;
   background: #fce6f5;
   padding: 2px 8px;
@@ -132,30 +132,30 @@ h1.light-font {
   line-height: 15.6px;
 }
 
-.receipt-details__divider {
+.receipt-details__section-divider {
   border: 0;
   height: 1px;
   background: #d8d8d8;
   margin-bottom: 30px;
 }
 
-.receipt-details__reference-container {
+.receipt-details__references {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   gap: 40px;
 }
 
-.receipt-details__reference-item {
+.receipt-details__reference {
   display: flex;
   justify-content: space-between;
 }
 
-.receipt-details__reference-item > span {
+.receipt-details__reference > span {
   line-height: 18.2px;
 }
 
-.receipt-details__reference-container {
+.receipt-details__references {
   margin-top: 40px;
   font-size: 18px;
   color: #333;
@@ -171,12 +171,12 @@ h1.light-font {
   bottom: 40px;
 }
 
-.receipt-footer__pink-bar {
+.receipt-footer__highlight-bar {
   height: 16px;
   background-color: #e10098;
   width: 100%;
 }
 
-.text-red {
+.text--color-red {
   color: #ff0000;
 }
